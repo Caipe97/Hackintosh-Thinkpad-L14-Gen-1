@@ -15,6 +15,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Camera    | 720p                                                 |                                                              |
 | Wifi & BT | Intel AX200                                          | Using AirportItlwm for Wi-Fi, planning on getting a Broadcom |
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
+| Audio     | ALC257                                               | Using alcid=11 to get sound working                          |
 
 ## Status
 
