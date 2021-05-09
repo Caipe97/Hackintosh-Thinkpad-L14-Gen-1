@@ -7,7 +7,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | --------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | Type      | 20U1, 20U2                                           |                                                              |
 | CPU       | Intel Core i5-10210U                                 |                                                              |
-| GPU       | Intel UHD                                            |                                                              |
+| GPU       | Intel UHD 630                                        |                                                              |
 | SSD       | Kingston A2000 512GB                                 | Replaced default 256GB SSD with a larger one                 |
 | Screen    | 14" FHD 1920x1080                                    | My model has no touch or pen input                           |
 | Memory    | 16GB / 2666MHz DDR4                                  |                                                              |
@@ -27,27 +27,35 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
-- [x] Keyboard `Not all media keys are workinhg. Brightness and Volume buttons do.`
-- [x]  Audio -`"alcid=11" - or see setup above`
+- [x] Keyboard `Not all media keys are working. Brightness and Volume buttons do.`
+- [x]  Audio -`"alcid=11"`
 - [x] Microphone
 - [x] Sleep/Wake `Sleep light gets stuck at breathing mode after waking up. Need SSDT Fix for this.`
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
 - [x] USB Ports `USB map created.`
 - [x] Webcam
-- [ ] TouchPad `Works but is very jumpy, especially when you slide your finger too fast.`
+- [x] TouchPad `Works using a debug version of VoodooRMI with palm rejection disabled. Needs fixing.`
 - [x] HDMI
 
 <summary><strong>What's NOT working</strong></summary>
 
-- Some media keys
+- Brightness and special keys
+- Sidecar or Handoff
+
+<summary><strong>Notes</strong></summary>
+
+- Brightness and special keys are not functioning as of now. The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch.
+- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds.
+- A Broadcom Wi-Fi card is recommended.
+- Quirks are enabled to circumvent the CFG Lock, which cannot be disabled without BIOS modding (requires hardware).
 
 # Initial setup
-I used seven-of-eleven's very helpful guide for a Lenovo L13 Yoga, since specs are quite similar. You can check out his repo at https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh
+I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar.
 
 I encountered many problems that kept my device from working fine:
 - System would reboot instantly (had to remove YogaSMC to get it to start properly)
 - System would reboot before sleeping
-- Touchpad gestures would work erratically (L14 uses SMBUS to interface with the touchpad, unlike L13's I2C)
+- Touchpad gestures would work erratically (E14 uses ELAN touchpad, while L14 uses Synaptics)
 - Battery wouldn't show up
 - Power management broken
 - Wi-Fi wouldn't work after sleep
