@@ -16,9 +16,26 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Wifi & BT | Intel AX200                                          | Using AirportItlwm for Wi-Fi, planning on getting a Broadcom |
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
 
-#Current Status
+## Status
 
-WIP
+<details>  
+<summary><strong>What's working ✅</strong></summary>
+
+- [x] Battery percentage
+- [x] Bluetooth - Intel AX200
+- [x] Wifi - Intel Wireless-AC 9560
+- [x] CPU power management
+- [x] GPU UHD hardware acceleration / performance 
+- [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
+- [x] Keyboard `Not all media keys are workinhg. Brightness and Volume buttons do.`
+- [x]  Audio -`"alcid=11" - or see setup above`
+- [x] Microphone
+- [x] Sleep/Wake `Sleep light gets stuck at breathing mode after waking up. Need SSDT Fix for this.`
+- [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
+- [x] USB Ports `USB map created.`
+- [x] Web camera `Both cameras are working after the USB mapping was done.`
+- [ ] TouchPad `Works but is very jumpy, especially when you slide your finger too fast.`
+- [x] HDMI
 
 
 # Initial setup
