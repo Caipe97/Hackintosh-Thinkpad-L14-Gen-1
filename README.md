@@ -18,12 +18,11 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 
 ## Status
 
-<details>  
 <summary><strong>What's working ✅</strong></summary>
 
 - [x] Battery percentage
 - [x] Bluetooth - Intel AX200
-- [x] Wifi - Intel Wireless-AC 9560
+- [x] Wifi - Intel AX200
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
@@ -33,10 +32,13 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - [x] Sleep/Wake `Sleep light gets stuck at breathing mode after waking up. Need SSDT Fix for this.`
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
 - [x] USB Ports `USB map created.`
-- [x] Web camera `Both cameras are working after the USB mapping was done.`
+- [x] Webcam
 - [ ] TouchPad `Works but is very jumpy, especially when you slide your finger too fast.`
 - [x] HDMI
 
+<summary><strong>What's NOT working</strong></summary>
+
+- Some media keys
 
 # Initial setup
 I used seven-of-eleven's very helpful guide for a Lenovo L13 Yoga, since specs are quite similar. You can check out his repo at https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh
