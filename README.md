@@ -48,6 +48,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds.
 - A Broadcom Wi-Fi card is recommended.
 - Quirks are enabled to circumvent the CFG Lock, which cannot be disabled without BIOS modding (requires hardware).
+- I haven't tested USB-C adapters or displays yet.
 
 # Initial setup
 I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar.
