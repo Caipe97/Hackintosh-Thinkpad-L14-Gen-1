@@ -13,17 +13,17 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Memory    | 16GB / 2666MHz DDR4                                  |                                                              |
 | Battery   | Integrated Li-Polymer 43Wh                           | Single battery                                               |
 | Camera    | 720p                                                 |                                                              |
-| Wifi & BT | Intel AX200                                          | Using AirportItlwm for Wi-Fi, planning on getting a Broadcom |
+| Wifi & BT | Intel AX200                                          |                                                              |
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
-| Audio     | ALC257                                               | Using alcid=86 to get sound working                          |
+| Audio     | ALC257                                               |                                                              |
 
 ## Status
 
 <summary><strong>What's working ✅</strong></summary>
 
 - [x] Battery percentage
-- [x] Bluetooth - Intel AX200
-- [x] Wifi - Intel AX200
+- [x] Bluetooth - Intel AX200 `Works flawlessly with IntelBluetooth`.
+- [x] Wifi - Intel AX200  `Using itlwm + Heliport. Not as native as Airportitlwm, but much more stable.`
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
