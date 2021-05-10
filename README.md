@@ -29,7 +29,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
-- [x] Keyboard `Not all media keys are working. Volume buttons do.`
+- [x] Keyboard `Not all media keys work. Volume buttons do.`
 - [x]  Audio -`"alcid=86"`
 - [x] Microphone
 - [x] Sleep/Wake `Sleep light gets stuck at breathing mode after waking up. Need SSDT Fix for this.`
