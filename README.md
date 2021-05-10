@@ -1,6 +1,6 @@
 # Hackintosh-Thinkpad-L14-Gen-1
 
-Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs are as follows:
+Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as follows:
 
 | Opencore |  macOS |
 | ---------| ------ |
