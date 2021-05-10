@@ -7,21 +7,22 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | 0.6.9    | 11.2.2 |
 
 
-| Category  | Component                                            | Note                                                         |
-| --------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| Type      | 20U1, 20U2                                           |                                                              |
-| CPU       | Intel Core i5-10210U                                 |                                                              |
-| GPU       | Intel UHD 630                                        |                                                              |
-| SSD       | Kingston A2000 512GB                                 | Replaced default 256GB SSD with a larger one                 |
-| Screen    | 14" FHD 1920x1080                                    | My model has no touch or pen input                           |
-| Memory    | 16GB / 2666MHz DDR4                                  |                                                              |
-| Battery   | Integrated Li-Polymer 43Wh                           | Single battery                                               |
-| Camera    | 720p                                                 |                                                              |
-| Wifi & BT | Intel AX200                                          |                                                              |
-| Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
-| Audio     | ALC257                                               |                                                              |
-| SD Card   | O2 Micro (1217:8621)                                 |                                                              |
-| UEFI Chip | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
+| Category    | Component                                            | Note                                                         |
+| ----------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Type        | 20U1, 20U2                                           |                                                              |
+| CPU         | Intel Core i5-10210U                                 |                                                              |
+| GPU         | Intel UHD 630                                        |                                                              |
+| SSD         | Kingston A2000 512GB                                 | Replaced default 256GB SSD with a larger one                 |
+| Screen      | 14" FHD 1920x1080                                    | My model has no touch or pen input                           |
+| Memory      | 16GB / 2666MHz DDR4                                  |                                                              |
+| Battery     | Integrated Li-Polymer 43Wh                           | Single battery                                               |
+| Camera      | 720p                                                 |                                                              |
+| Wifi & BT   | Intel AX200                                          |                                                              |
+| Input       | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
+| Audio       | ALC257                                               |                                                              |
+| SD Card     | O2 Micro (1217:8621)                                 |                                                              |
+| UEFI Chip   | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
+| Fingerprint | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
 
 ## Status
 
