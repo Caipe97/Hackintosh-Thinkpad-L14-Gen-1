@@ -55,16 +55,15 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | SSDT-BAT.aml                |
 | SSDT-EC-USBX-LAPTOP.aml     |
 | SSDT-GPRW.aml               |
-| SSDT-HPET.aml               |*
+| SSDT-HPET.aml               |
 | SSDT-Keyboard.aml           |
 | SSDT-OCBAT1-lenovoPRO13.aml |
-| SSDT-PLUG-DRTNIA.aml        |*
+| SSDT-PLUG-DRTNIA.aml        |
 | SSDT-PNLF-CFL.aml           |
 | SSDT-RHUB.aml               |
-| SSDT-Thinkpad_Clickpad.aml  |*
+| SSDT-Thinkpad_Clickpad.aml  |
 | SSDT-XOSI                   |
 
-* : Needs checking
 </details>
 
 <details>
@@ -74,7 +73,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AppleALC               | 1.5.9   |
-| BrightnessKeys         |         |* Non-functional
+| BrightnessKeys         |         |
 | CPUFriend              | 1.2.3   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
@@ -88,7 +87,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | USBMap                 | N/A     |
 | VirtualSMC             | 1.2.2   |
 | VoodooPS2Controller    | 2.2.3   |
-| VoodooRMI              | 1.3.2   | Debug version
+| VoodooRMI              | 1.3.2   |
 | VoodooSMBUS            | 2.2     |
 | WhateverGreen          | 1.4.9   |
 
@@ -103,6 +102,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware). Also, the DSDT patch for the battery comes from a Lenovo L13.
 - I haven't tested USB-C adapters or displays yet.
 - DSDT Patches need cleanup.
+- Touchpad is flaky, sometimes the Trackpoint stops working, or high palm rejection kicks in. Usually, sleeping and waking up fixes this.
 
 # Initial setup
 I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar, then appended my changes to kexts and DSDT Patches.
