@@ -45,6 +45,56 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - HDMI (fix coming soon)
 - Micro SD Card Reader
 
+<details>
+<summary><strong>ACPI Files</strong></summary>
+<br>
+
+| Component                   |
+| --------------------------- |
+| SSDT-AWAC.aml               |
+| SSDT-BAT.aml                |
+| SSDT-EC-USBX-LAPTOP.aml     |
+| SSDT-GPRW.aml               |
+| SSDT-HPET.aml               |*
+| SSDT-Keyboard.aml           |
+| SSDT-OCBAT1-lenovoPRO13.aml |
+| SSDT-PLUG-DRTNIA.aml        |*
+| SSDT-PNLF-CFL.aml           |
+| SSDT-RHUB.aml               |
+| SSDT-Thinkpad_Clickpad.aml  |*
+| SSDT-XOSI                   |
+
+* : Needs checking
+</details>
+
+<details>
+<summary><strong>Kernel extensions</strong></summary>
+<br>
+
+| Kext                   | Version |
+| :--------------------- | ------- |
+| AppleALC               | 1.5.9   |
+| BrightnessKeys         |         |* Non-functional
+| CPUFriend              | 1.2.3   |
+| IntelBluetoothFirmware | 1.1.2   |
+| IntelBluetoothInjector | 1.1.2   |
+| IntelMausi             | 1.0.5   |
+| itlwm                  | 1.3.0   |
+| Lilu                   | 1.5.2   |
+| NVMeFix                | 1.0.6   |
+| SMCBatteryManager      | 1.2.2   |
+| SMCProcessor           | 1.2.2   |
+| SMCSuperIO             | 1.2.2   |
+| USBMap                 | N/A     |
+| VirtualSMC             | 1.2.2   |
+| VoodooPS2Controller    | 2.2.3   |
+| VoodooRMI              | 1.3.2   | Debug version
+| VoodooSMBUS            | 2.2     |
+| WhateverGreen          | 1.4.9   |
+
+</details>
+
+
 <summary><strong>Notes</strong></summary>
 
 - The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch to make special keys work.
