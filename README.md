@@ -15,7 +15,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Camera    | 720p                                                 |                                                              |
 | Wifi & BT | Intel AX200                                          | Using AirportItlwm for Wi-Fi, planning on getting a Broadcom |
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
-| Audio     | ALC257                                               | Using alcid=11 to get sound working                          |
+| Audio     | ALC257                                               | Using alcid=86 to get sound working                          |
 
 ## Status
 
@@ -28,7 +28,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Keyboard `Not all media keys are working. Volume buttons do.`
-- [x]  Audio -`"alcid=11"`
+- [x]  Audio -`"alcid=86"`
 - [x] Microphone
 - [x] Sleep/Wake `Sleep light gets stuck at breathing mode after waking up. Need SSDT Fix for this.`
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
@@ -47,7 +47,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - Brightness and special keys are not functioning as of now. The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch.
 - Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds.
 - A Broadcom Wi-Fi card is recommended.
-- Quirks are enabled to circumvent the CFG Lock, which cannot be disabled without BIOS modding (requires hardware).
+- Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware).
 - I haven't tested USB-C adapters or displays yet.
 
 # Initial setup
