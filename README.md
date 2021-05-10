@@ -2,9 +2,9 @@
 
 Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs are as follows:
 
-| Opencore | macOS |
-| ---------------- |
-| 0.6.9    | 11.2.2|
+| Opencore |  macOS |
+| ---------| ------ |
+| 0.6.9    | 11.2.2 |
 
 
 | Category  | Component                                            | Note                                                         |
