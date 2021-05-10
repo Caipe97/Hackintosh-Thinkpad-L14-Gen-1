@@ -39,7 +39,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 
 <summary><strong>What's NOT working</strong></summary>
 
-- Brightness and special keys
+- Brightness keys and special keys (Brightness can be changed through settings)
 - Sidecar or Handoff
 - HDMI (fix coming soon)
 - Micro SD Card Reader
