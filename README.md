@@ -16,6 +16,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Wifi & BT | Intel AX200                                          |                                                              |
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
 | Audio     | ALC257                                               |                                                              |
+| SD Card   | O2 Micro (1217:8621)                                 |                                                              |
 
 ## Status
 
@@ -41,6 +42,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - Brightness and special keys
 - Sidecar or Handoff
 - HDMI (fix coming soon)
+- Micro SD Card Reader
 
 <summary><strong>Notes</strong></summary>
 
