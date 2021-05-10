@@ -17,6 +17,7 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 | Input     | PS2 Keyboard & SMBUS Synaptics TrackPad              | Not all media keys working                                   |
 | Audio     | ALC257                                               |                                                              |
 | SD Card   | O2 Micro (1217:8621)                                 |                                                              |
+| UEFI Chip | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
 
 ## Status
 
@@ -46,19 +47,12 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 
 <summary><strong>Notes</strong></summary>
 
-- Brightness and special keys are not functioning as of now. The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch.
-- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds.
+- The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch to make special keys work.
+- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds. I had no problems with waking from sleep or hibernation for now
 - A Broadcom Wi-Fi card is recommended.
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware).
 - I haven't tested USB-C adapters or displays yet.
+- DSDT Patches need cleanup.
 
 # Initial setup
-I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar.
-
-I encountered many problems that kept my device from working fine:
-- System would reboot instantly (had to remove YogaSMC to get it to start properly)
-- System would reboot before sleeping
-- Touchpad gestures would work erratically (E14 uses ELAN touchpad, while L14 uses Synaptics)
-- Battery wouldn't show up
-- Power management broken
-- Wi-Fi wouldn't work after sleep
+I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar, then appended my changes to kexts and DSDT Patches.
