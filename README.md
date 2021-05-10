@@ -22,7 +22,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | Audio       | ALC257                                               |                                                              |
 | SD Card     | O2 Micro (1217:8621)                                 |                                                              |
 | UEFI Chip   | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
-| Fingerprint | Winbond 25Q256JVEQ + (EC?) Winbond 25Q80DVSIG        | Useful if someone wants to disable CFG-Lock                  |
+| Fingerprint | Goodix Fingerprint Sensor                            | No driver exists for this model neither in macOS nor Linux   |
 
 ## Status
 
@@ -49,6 +49,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - Sidecar or Handoff
 - HDMI (fix coming soon)
 - Micro SD Card Reader
+- Fingerprint Reader
 
 <details>
 <summary><strong>ACPI Files</strong></summary>
@@ -78,7 +79,6 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AppleALC               | 1.5.9   |
-| BrightnessKeys         |         |
 | CPUFriend              | 1.2.3   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
