@@ -35,12 +35,12 @@ Attempt at running macOS Big Sur (11.2.2) on a Thinkpad L14 Gen 1 (Intel). Specs
 - [x] USB Ports `USB map created.`
 - [x] Webcam
 - [x] TouchPad `Works using a debug version of VoodooRMI with palm rejection disabled. Needs fixing.`
-- [x] HDMI
 
 <summary><strong>What's NOT working</strong></summary>
 
 - Brightness and special keys
 - Sidecar or Handoff
+- HDMI (fix coming soon)
 
 <summary><strong>Notes</strong></summary>
 
