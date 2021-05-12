@@ -105,6 +105,9 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds. I had no problems with waking from sleep or hibernation for now
 - A Broadcom Wi-Fi card is recommended.
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware). Also, the DSDT patch for the battery comes from a Lenovo L13.
+
+*EDIT*: I've tested and the culprit for power usage is a combination of itlwm and the debug version of VoodoRMI. itlwm does not let the CPU idle at less than 1.5W, and with VoodooRMI, touching the touchpad creates a power spike (because of the constant log messages). Without these 2, I'm getting power readings as low as 0.7W, which surely increases battery life. Solution? Get a supported Wi-Fi Card.
+
 - I haven't tested USB-C adapters or displays yet.
 - DSDT Patches need cleanup.
 - Touchpad is flaky, sometimes the Trackpoint stops working, or high palm rejection kicks in. Usually, sleeping and waking up fixes this.
