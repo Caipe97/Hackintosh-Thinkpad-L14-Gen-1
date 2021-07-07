@@ -41,11 +41,10 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
 - [x] USB Ports `USB map created.`
 - [x] Webcam
-- [x] TouchPad `Works using a debug version of VoodooRMI with palm rejection disabled. Needs fixing.`
+- [x] TouchPad `Works best right now with VoodooPS2. VoodooRMI and VoodooI2C introduce quirks like no keyboard/touchpad after sleep `
 
 <summary><strong>What's NOT working</strong></summary>
 
-- Brightness keys and special keys (Brightness can be changed through settings)
 - Sidecar or Handoff
 - HDMI (fix coming soon)
 - Micro SD Card Reader
@@ -63,12 +62,10 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | SSDT-GPRW.aml               |
 | SSDT-HPET.aml               |
 | SSDT-Keyboard.aml           |
-| SSDT-OCBAT1-lenovoPRO13.aml |
 | SSDT-PLUG-DRTNIA.aml        |
 | SSDT-PNLF-CFL.aml           |
 | SSDT-RHUB.aml               |
 | SSDT-Thinkpad_Clickpad.aml  |
-| SSDT-XOSI                   |
 
 </details>
 
@@ -86,14 +83,12 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | itlwm                  | 1.3.0   |
 | Lilu                   | 1.5.2   |
 | NVMeFix                | 1.0.6   |
-| SMCBatteryManager      | 1.2.2   |
-| SMCProcessor           | 1.2.2   |
-| SMCSuperIO             | 1.2.2   |
+| SMCBatteryManager      | 1.2.3   |
+| SMCProcessor           | 1.2.3   |
+| SMCSuperIO             | 1.2.3   |
 | USBMap                 | N/A     |
-| VirtualSMC             | 1.2.2   |
+| VirtualSMC             | 1.2.3   |
 | VoodooPS2Controller    | 2.2.3   |
-| VoodooRMI              | 1.3.2   |
-| VoodooSMBUS            | 2.2     |
 | WhateverGreen          | 1.4.9   |
 
 </details>
@@ -102,15 +97,15 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 <summary><strong>Notes</strong></summary>
 
 - The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch to make special keys work.
-- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 45 seconds. I had no problems with waking from sleep or hibernation for now
+- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 30 seconds. I had no problems with waking from sleep or hibernation for now
 - A Broadcom Wi-Fi card is recommended.
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware). Also, the DSDT patch for the battery comes from a Lenovo L13.
 
-*EDIT*: I've tested and the culprit for power usage is a combination of itlwm and the debug version of VoodoRMI. itlwm does not let the CPU idle at less than 1.5W, and with VoodooRMI, touching the touchpad creates a power spike (because of the constant log messages). Without these 2, I'm getting power readings as low as 0.7W, which surely increases battery life. Solution? Get a supported Wi-Fi Card.
+*EDIT*: I've tested and the culprit for power usage is a combination of itlwm. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm gets me power readings as low as 0.7W, which surely increases battery life. Solution? Get a supported Wi-Fi Card.
 
 - I haven't tested USB-C adapters or displays yet.
 - DSDT Patches need cleanup.
-- Touchpad is flaky, sometimes the Trackpoint stops working, or high palm rejection kicks in. Usually, sleeping and waking up fixes this.
+- Touchpad gestures need to be slow to be detected. This is because of using VoodooPS2 instead of other solution like VoodooI2C and VoodooRMI. The latter two introduce problems with sleep/wake, so I am using VoodooPS2 as a Fallback for now.
 
 # Initial setup
 I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar, then appended my changes to kexts and DSDT Patches.
