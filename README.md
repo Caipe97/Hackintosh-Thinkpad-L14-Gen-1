@@ -77,6 +77,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | :--------------------- | ------- |
 | AppleALC               | 1.5.9   |
 | CPUFriend              | 1.2.3   |
+| ECEnabler              | 1.1.2   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
 | IntelMausi             | 1.0.5   |
