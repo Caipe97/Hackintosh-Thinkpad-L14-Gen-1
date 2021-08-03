@@ -106,7 +106,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - Implementing the YogaSMC kext would alleviate many of these problems, but as of today, it KPs.
 - HDMI works but needs extensive patching: External displays stop working after sleep or reboot, replugging fixes the issue but is far from ideal. Still, it is enough to get by. I'm working on this but if you've got a fix please report an issue.
 
-*EDIT*: I've tested and the culprit for power usage is a combination of itlwm. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm gets me power readings as low as 0.7W, which surely increases battery life. Solution? Get a supported Wi-Fi Card.
+*EDIT*: I've tested and the culprit for power usage is a combination of itlwm and SSDT-PLUG, though I think the problem might be somewhere else. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm and SSDT-PLUG gets me power readings as low as 0.7W, which surely increases battery life, but disableng SSDT-PLUG makes fans not ramp up on full load, which toasts the CPU. Solution? Get a supported Wi-Fi Card. 
 
 - I haven't tested USB-C adapters or displays yet.
 - DSDT Patches need cleanup.
