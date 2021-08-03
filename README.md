@@ -78,23 +78,24 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 
 | Kext                   | Version |
 | :--------------------- | ------- |
-| AppleALC               | 1.5.9   |
-| CPUFriend              | 1.2.3   |
+| AppleALC               | 1.6.3   |
+| BrightnessKeys         | 1.0.2   |
+| CPUFriend              | 1.2.4   |
+| ECEnabler              | 1.0.2   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
-| IntelMausi             | 1.0.5   |
+| IntelMausi             | 1.0.7   |
 | itlwm                  | 1.3.0   |
-| Lilu                   | 1.5.2   |
-| NVMeFix                | 1.0.6   |
-| SMCBatteryManager      | 1.2.2   |
-| SMCProcessor           | 1.2.2   |
-| SMCSuperIO             | 1.2.2   |
+| Lilu                   | 1.5.5   |
+| NVMeFix                | 1.0.9   |
+| SMCBatteryManager      | 1.2.6   |
+| SMCProcessor           | 1.2.6   |
+| SMCSuperIO             | 1.2.6   |
 | USBMap                 | N/A     |
-| VirtualSMC             | 1.2.2   |
+| VirtualSMC             | 1.2.6   |
 | VoodooPS2Controller    | 2.2.3   |
-| VoodooRMI              | 1.3.2   |
-| VoodooSMBUS            | 2.2     |
-| WhateverGreen          | 1.4.9   |
+| VoodooSMBUS            | 3.0     |
+| WhateverGreen          | 1.5.2   |
 
 </details>
 
