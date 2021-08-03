@@ -32,7 +32,8 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - [x] Bluetooth - Intel AX200 `Works flawlessly with IntelBluetooth`.
 - [x] Wifi - Intel AX200  `Using itlwm + Heliport. Not as native as Airportitlwm, but much more stable.`
 - [x] CPU power management
-- [x] GPU UHD hardware acceleration / performance 
+- [x] GPU UHD hardware acceleration / performance
+- [x] HDMI `VIEW NOTES BELOW`
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Keyboard `Not all media keys work. Volume buttons do.`
 - [x]  Audio -`"alcid=86"`
@@ -46,7 +47,6 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 <summary><strong>What's NOT working</strong></summary>
 
 - Sidecar or Handoff
-- HDMI (fix coming soon)
 - Micro SD Card Reader
 - Fingerprint Reader
 
@@ -103,6 +103,8 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 20 seconds. I had no problems with waking from sleep or hibernation for now
 - A Broadcom Wi-Fi card is recommended.
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware). Also, the DSDT patch for the battery comes from a Lenovo L13.
+- Implementing the YogaSMC kext would alleviate many of these problems, but as of today, it KPs.
+- HDMI works but needs extensive patching: External displays stop working after sleep or reboot, replugging fixes the issue but is far from ideal. Still, it is enough to get by. I'm working on this but if you've got a fix please report an issue.
 
 *EDIT*: I've tested and the culprit for power usage is a combination of itlwm. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm gets me power readings as low as 0.7W, which surely increases battery life. Solution? Get a supported Wi-Fi Card.
 
