@@ -4,7 +4,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 
 | Opencore |  macOS |
 | ---------| ------ |
-| 0.6.9    | 11.2.2 |
+| 0.7.2    | 11.2.2 |
 
 
 | Category    | Component                                            | Note                                                         |
@@ -72,25 +72,27 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 <details>
 <summary><strong>Kernel extensions</strong></summary>
 <br>
-
+  
 | Kext                   | Version |
 | :--------------------- | ------- |
-| AppleALC               | 1.5.9   |
-| CPUFriend              | 1.2.3   |
-| ECEnabler              | 1.0.1   |
+| AppleALC               | 1.6.3   |
+| BrightnessKeys         | 1.0.2   |
+| CPUFriend              | 1.2.4   |
+| ECEnabler              | 1.0.2   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
-| IntelMausi             | 1.0.5   |
+| IntelMausi             | 1.0.7   |
 | itlwm                  | 1.3.0   |
-| Lilu                   | 1.5.2   |
-| NVMeFix                | 1.0.6   |
-| SMCBatteryManager      | 1.2.3   |
-| SMCProcessor           | 1.2.3   |
-| SMCSuperIO             | 1.2.3   |
+| Lilu                   | 1.5.5   |
+| NVMeFix                | 1.0.9   |
+| SMCBatteryManager      | 1.2.6   |
+| SMCProcessor           | 1.2.6   |
+| SMCSuperIO             | 1.2.6   |
 | USBMap                 | N/A     |
-| VirtualSMC             | 1.2.3   |
+| VirtualSMC             | 1.2.6   |
 | VoodooPS2Controller    | 2.2.3   |
-| WhateverGreen          | 1.4.9   |
+| VoodooSMBUS            | 3.0     |
+| WhateverGreen          | 1.5.2   |
 
 </details>
 
@@ -98,7 +100,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 <summary><strong>Notes</strong></summary>
 
 - The SSDT patch related to the keyboard comes from an E14, so it needs to be replaced with a custom patch to make special keys work.
-- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 30 seconds. I had no problems with waking from sleep or hibernation for now
+- Sleep and Wake needs extended testing. From closing the lid to actual sleeping it takes around 20 seconds. I had no problems with waking from sleep or hibernation for now
 - A Broadcom Wi-Fi card is recommended.
 - Battery life isn't quite up to spec. I suspect it is because of the CFG Lock, which cannot be disabled without BIOS modding (requires hardware). Also, the DSDT patch for the battery comes from a Lenovo L13.
 
