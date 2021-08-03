@@ -106,11 +106,11 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 - Implementing the YogaSMC kext would alleviate many of these problems, but as of today, it KPs.
 - HDMI works but needs extensive patching: External displays stop working after sleep or reboot, replugging fixes the issue but is far from ideal. Still, it is enough to get by. I'm working on this but if you've got a fix please report an issue.
 
-*EDIT*: I've tested and the culprit for power usage is a combination of itlwm and SSDT-PLUG, though I think the problem might be somewhere else. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm and SSDT-PLUG gets me power readings as low as 0.7W, which surely increases battery life, but disableng SSDT-PLUG makes fans not ramp up on full load, which toasts the CPU. Solution? Get a supported Wi-Fi Card. 
+*EDIT*: I've tested and the culprit for power usage is a combination of itlwm and SSDT-PLUG, though I think the problem might be somewhere else. itlwm does not let the CPU idle at less than 1.5W. Disabling itlwm and SSDT-PLUG gets me power readings as low as 0.7W, which surely increases battery life, but disabling SSDT-PLUG makes fans not ramp up on full load, which toasts the CPU. Solution? Get a supported Wi-Fi Card. 
 
 - I haven't tested USB-C adapters or displays yet.
 - DSDT Patches need cleanup.
-- Touchpad gestures need to be slow to be detected. This is because of using VoodooPS2 instead of other solution like VoodooI2C and VoodooRMI. The latter two introduce problems with sleep/wake, so I am using VoodooPS2 as a Fallback for now.
+- Touchpad gestures need to be slow to be detected. This is because of using VoodooPS2 instead of other solutions like VoodooI2C and VoodooRMI. The latter two introduce problems with sleep/wake, so I am using VoodooPS2 as a Fallback for now.
 
 # Initial setup
 I used AniKulkarn's repo (https://github.com/AniKulkarn/Hackintosh-ThinkPad-E14) as its specs are quite similar, then appended my changes to kexts and DSDT Patches.
