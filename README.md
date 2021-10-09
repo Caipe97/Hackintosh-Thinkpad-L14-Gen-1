@@ -95,6 +95,7 @@ Attempt at running macOS Big Sur on a Thinkpad L14 Gen 1 (Intel). Specs are as f
 | VirtualSMC             | 1.2.7   |
 | VoodooPS2Controller    | 2.2.6   |
 | VoodooSMBUS            | 3.0     |
+| VoodooRMI              | 1.3.5   |
 | WhateverGreen          | 1.5.3   |
 | YogaSMC                | 1.5.1   |
 
